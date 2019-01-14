@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         Flowable.interval(1, 1, TimeUnit.SECONDS)
                 .filter(Main::isEven)
-                .map(e -> e * 2);
-        //.subscribe(System.out::println);
+                .map(e -> e * 2)
+                .subscribe(System.out::println);
         sleep(10000);
 
     }
